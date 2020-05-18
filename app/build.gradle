@@ -23,6 +23,28 @@ android {
         }
     }
 
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/AL2.0'
+        exclude 'META-INF/LGPL2.1'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+        freeCompilerArgs = ["-Xallow-result-return-type"]
+    }
+
     dataBinding.enabled = true
 }
 
@@ -30,14 +52,25 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
 
     implementation project(Modules.webservice)
+    implementation project(Modules.covid)
+    implementation project(Modules.core)
 
     implementation Libs.stdlib
     implementation Libs.ktx
     implementation Libs.supportAppCompat
+    implementation Libs.designSupport
+    implementation Libs.fragmentJava
+    implementation Libs.fragmentKotlin
     implementation Libs.constraintLayout
     implementation Libs.viewModel
     implementation Libs.liveData
     implementation Libs.lifeCycleExtension
+    implementation Libs.koin
+    implementation Libs.koinExt
+    implementation Libs.koinFragment
+    implementation Libs.koinViewModel
+    implementation Libs.retrofit
+    implementation Libs.gsonConverter
 
     testImplementation Libs.jUnit
     androidTestImplementation Libs.extInstrumentation

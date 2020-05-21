@@ -5,9 +5,11 @@ import android.location.LocationManager
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewAnimationUtils
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import br.com.jdscaram.covid19radar.databinding.MainFragmentBinding
+import br.com.jdscaram.covid19radar.util.AnimationUtils
 import br.com.jdscaram.covid19radar.util.LocationUtils
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -19,6 +21,7 @@ class MainFragment : Fragment() {
     private val mainViewModel by viewModel<MainViewModel>()
 
     private lateinit var binding: MainFragmentBinding
+    private var isFabRotate = false
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,11 +30,10 @@ class MainFragment : Fragment() {
         binding = this
         map.init(this@MainFragment)
         setCurrentLocation()
+        fab.setOnClickListener {
+            isFabRotate = AnimationUtils.rotateFab(it, !isFabRotate)
+        }
     }.root
-
-    private fun loadInfo() {
-        mainViewModel.loadCountries()
-    }
 
     private fun setCurrentLocation() {
         val locationManager =
@@ -43,6 +45,7 @@ class MainFragment : Fragment() {
             binding.map.setCurrentLocation(location)
         }
     }
+
 
     companion object {
         fun newInstance() = MainFragment()

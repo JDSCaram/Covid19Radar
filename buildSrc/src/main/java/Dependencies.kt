@@ -11,7 +11,7 @@ object Versions {
     const val kotlin = "1.3.72"
     const val gradle = "3.6.3"
     const val retrofit = "2.8.1"
-    const val androidSupportLib = "27.0.2"
+    const val supportDesign = "28.0.0"
     const val constraintLayout = "1.1.3"
     const val ktx = "1.2.0"
     const val recyclerView = "1.1.0"
@@ -40,6 +40,7 @@ object Libs {
     const val recyclerview = "androidx.recyclerview:recyclerview:${Versions.recyclerView}"
     const val supportAppCompat = "androidx.appcompat:appcompat:${Versions.appcompat}"
     const val designSupport = "com.google.android.material:material:${Versions.support}"
+    const val supportDesign = "com.android.support:design:${Versions.supportDesign}"
 
     // Java language implementation
     const val fragmentJava = "androidx.fragment:fragment:${Versions.fragment}"

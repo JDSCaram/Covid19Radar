@@ -1,3 +1,5 @@
+include ':core'
+include ':feature:covid'
 include ':app'
 rootProject.name = "Covid19Radar"
 include ':webservice'

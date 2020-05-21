@@ -1,13 +1,10 @@
 apply from: "$rootDir/android-config.gradle"
 apply plugin: 'kotlin-kapt'
 
-
 dependencies {
+    implementation project(Modules.webservice)
     implementation project(Modules.core)
 
-    implementation Libs.retrofit
-    implementation Libs.gsonConverter
     implementation Libs.coroutines
-    implementation Libs.coroutinesAndroid
-    implementation Libs.coroutinesTest
+    implementation Libs.retrofit
 }

@@ -11,7 +11,6 @@ import androidx.databinding.DataBindingUtil
 import br.com.jdscaram.covid19radar.R
 import br.com.jdscaram.covid19radar.databinding.MainActivityBinding
 
-
 private const val REQUEST_CODE = 767
 
 class MainActivity : AppCompatActivity() {

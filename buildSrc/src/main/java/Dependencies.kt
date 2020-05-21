@@ -47,7 +47,6 @@ object Libs {
     // Kotlin
     const val fragmentKotlin = "androidx.fragment:fragment-ktx:${Versions.fragment}"
 
-
     const val constraintLayout =
         "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
 

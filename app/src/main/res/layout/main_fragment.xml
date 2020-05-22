@@ -15,10 +15,48 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
             android:src="@drawable/ic_add"
-            app:fabSize="normal"
+            android:textColor="@android:color/holo_red_dark"
+            app:backgroundTint="@android:color/holo_orange_light"
+            app:fabSize="mini"
+            app:icon="@android:drawable/ic_delete"
+            app:iconTint="@android:color/holo_red_dark"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:rippleColor="@android:color/white" />
+            app:rippleColor="@android:color/holo_red_light" />
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:text="Countries"
+            android:textColor="@android:color/holo_red_dark"
+            app:backgroundTint="@android:color/holo_orange_light"
+            app:icon="@drawable/ic_world_location"
+            app:iconTint="@android:color/holo_red_dark"
+            app:layout_anchor="@id/fab"
+            app:layout_anchorGravity="bottom|right"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fab"
+            app:rippleColor="@android:color/holo_red_light" />
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/ranking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:text="Ranking"
+            android:textColor="@android:color/holo_red_dark"
+            app:backgroundTint="@android:color/holo_orange_light"
+            app:icon="@drawable/ic_ranking"
+            app:iconTint="@android:color/holo_red_dark"
+            app:layout_anchor="@id/country"
+            app:layout_anchorGravity="bottom|right"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/country"
+            app:rippleColor="@android:color/holo_red_light" />
 
         <br.com.jdscaram.covid19radar.ui.main.CustomMap
             android:id="@+id/map"

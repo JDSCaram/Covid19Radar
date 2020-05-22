@@ -16,7 +16,7 @@ object Versions {
     const val ktx = "1.2.0"
     const val recyclerView = "1.1.0"
     const val appcompat = "1.1.0"
-    const val support = "1.0.0"
+    const val support = "1.2.0-alpha01"
     const val koin = "2.1.5"
     const val fragment = "1.2.4"
 

@@ -5,15 +5,11 @@ import android.location.LocationManager
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewAnimationUtils
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import br.com.jdscaram.covid19radar.databinding.MainFragmentBinding
 import br.com.jdscaram.covid19radar.util.AnimationUtils
 import br.com.jdscaram.covid19radar.util.LocationUtils
-import com.google.android.gms.maps.CameraUpdateFactory
-import com.google.android.gms.maps.GoogleMap
-import com.google.android.gms.maps.model.LatLng
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainFragment : Fragment() {
@@ -30,8 +26,19 @@ class MainFragment : Fragment() {
         binding = this
         map.init(this@MainFragment)
         setCurrentLocation()
+        AnimationUtils.init(ranking)
+        AnimationUtils.init(country)
         fab.setOnClickListener {
             isFabRotate = AnimationUtils.rotateFab(it, !isFabRotate)
+            if (isFabRotate) {
+                AnimationUtils.showIn(country) {
+                    AnimationUtils.showIn(ranking)
+                }
+            } else {
+                AnimationUtils.showOut(ranking) {
+                    AnimationUtils.showOut(country)
+                }
+            }
         }
     }.root
 

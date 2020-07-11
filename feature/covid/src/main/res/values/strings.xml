@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="country_empty_state_title">Sorry! We do not have anything to show</string>
+    <string name="choose_country">Choose a country</string>
+</resources>

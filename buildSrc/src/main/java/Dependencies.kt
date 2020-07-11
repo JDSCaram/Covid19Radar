@@ -31,6 +31,7 @@ object Versions {
     const val coroutines = "1.3.6"
     const val navigation = "2.2.0"
     const val googlemaps = "17.0.0"
+    const val lottieVersion = "3.4.1"
 }
 
 object Libs {
@@ -59,6 +60,7 @@ object Libs {
     const val espresso = "androidx.test.espresso:espresso-core:${Versions.espresso}"
 
     const val viewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}"
+    const val lifeCycle = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycle}"
     const val liveData = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycle}"
     const val lifeCycleExtension =
         "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycleExtension}"
@@ -80,6 +82,8 @@ object Libs {
     const val navigationUi = "androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
 
     const val googlemaps = "com.google.android.gms:play-services-maps:${Versions.googlemaps}"
+
+    const val lottie = "com.airbnb.android:lottie:${Versions.lottieVersion}"
 }
 
 object Modules {

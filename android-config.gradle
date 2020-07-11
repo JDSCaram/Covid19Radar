@@ -37,6 +37,8 @@ dependencies {
     implementation Libs.stdlib
     implementation Libs.ktx
     implementation Libs.supportAppCompat
+    implementation Libs.designSupport
+    implementation Libs.supportDesign
 
     testImplementation Libs.jUnit
     androidTestImplementation Libs.extInstrumentation

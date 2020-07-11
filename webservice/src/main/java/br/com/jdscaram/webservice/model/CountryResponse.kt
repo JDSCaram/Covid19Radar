@@ -11,5 +11,3 @@ data class CountryResponse(
     @SerializedName("Slug")
     val slug: String
 )
-
-class CountriesResponse : ArrayList<CountryResponse>()

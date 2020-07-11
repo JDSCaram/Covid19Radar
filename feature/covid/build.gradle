@@ -6,5 +6,10 @@ dependencies {
     implementation project(Modules.core)
 
     implementation Libs.coroutines
+    implementation Libs.viewModel
+    implementation Libs.koinViewModel
+    implementation Libs.lifeCycle
+    implementation Libs.constraintLayout
     implementation Libs.retrofit
+    implementation Libs.lottie
 }

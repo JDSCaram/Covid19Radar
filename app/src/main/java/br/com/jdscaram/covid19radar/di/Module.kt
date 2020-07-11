@@ -3,6 +3,7 @@ package br.com.jdscaram.covid19radar.di
 import android.app.Application
 import br.com.jdscaram.covid.repository.CovidRepository
 import br.com.jdscaram.covid.repository.CovidRepositoryImpl
+import br.com.jdscaram.covid.ui.countries.model.CountriesViewModel
 import br.com.jdscaram.covid19radar.ui.main.MainViewModel
 import br.com.jdscaram.webservice.core.DispatcherProvider
 import br.com.jdscaram.webservice.core.DispatcherProviderImpl
@@ -11,6 +12,7 @@ import br.com.jdscaram.webservice.core.WebserviceImpl
 import com.google.gson.FieldNamingPolicy
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import okhttp3.Cache
 import okhttp3.OkHttpClient
 import org.koin.android.ext.koin.androidApplication
@@ -21,8 +23,10 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 const val baseUrl = "https://api.covid19api.com"
 
+@ExperimentalCoroutinesApi
 val viewModelModule = module {
     viewModel { MainViewModel(get()) }
+    viewModel { CountriesViewModel(get()) }
 }
 
 val networkingModule = module {

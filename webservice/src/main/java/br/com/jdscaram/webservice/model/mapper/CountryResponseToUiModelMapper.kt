@@ -10,6 +10,4 @@ class CountryResponseToUiModelMapper : Mapper<List<CountryResponse>?, List<Count
     }?.sortedBy {
         it.country
     } ?: emptyList()
-
-
 }

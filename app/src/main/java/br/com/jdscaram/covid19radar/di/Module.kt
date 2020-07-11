@@ -5,8 +5,8 @@ import br.com.jdscaram.covid.repository.CovidRepository
 import br.com.jdscaram.covid.repository.CovidRepositoryImpl
 import br.com.jdscaram.covid.ui.countries.model.CountriesViewModel
 import br.com.jdscaram.covid19radar.ui.main.MainViewModel
-import br.com.jdscaram.webservice.core.DispatcherProvider
-import br.com.jdscaram.webservice.core.DispatcherProviderImpl
+import br.com.jdscaram.core.DispatcherProvider
+import br.com.jdscaram.core.DispatcherProviderImpl
 import br.com.jdscaram.webservice.core.Webservice
 import br.com.jdscaram.webservice.core.WebserviceImpl
 import com.google.gson.FieldNamingPolicy

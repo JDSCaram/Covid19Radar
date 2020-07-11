@@ -6,10 +6,17 @@ dependencies {
     implementation project(Modules.core)
 
     implementation Libs.coroutines
+    implementation Libs.coroutinesAndroid
     implementation Libs.viewModel
     implementation Libs.koinViewModel
     implementation Libs.lifeCycle
     implementation Libs.constraintLayout
     implementation Libs.retrofit
     implementation Libs.lottie
+
+    testImplementation Libs.mockkCore
+    testImplementation Libs.mockkAndroid
+    testImplementation Libs.coreTesting
+    testImplementation Libs.coroutinesTest
+    testImplementation Libs.coroutines
 }

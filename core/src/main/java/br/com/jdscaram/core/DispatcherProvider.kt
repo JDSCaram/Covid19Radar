@@ -1,4 +1,4 @@
-package br.com.jdscaram.webservice.core
+package br.com.jdscaram.core
 
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers

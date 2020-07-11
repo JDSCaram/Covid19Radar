@@ -75,9 +75,17 @@ dependencies {
     implementation Libs.navigationUi
     implementation Libs.googlemaps //map
 
+
+    implementation Libs.kotlinJunit
     testImplementation Libs.jUnit
     androidTestImplementation Libs.extInstrumentation
     androidTestImplementation Libs.espresso
+
+    testImplementation Libs.mockkCore
+    testImplementation Libs.mockkAndroid
+    testImplementation Libs.coreTesting
+    testImplementation Libs.coroutinesTest
+    testImplementation Libs.coroutines
 }
 
 repositories {

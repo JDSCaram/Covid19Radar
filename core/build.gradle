@@ -2,5 +2,15 @@ apply plugin: 'kotlin'
 
 dependencies {
     implementation Libs.stdlib
+    implementation Libs.kotlinJunit
+    implementation Libs.coroutines
+    implementation Libs.coroutinesTest
+    implementation Libs.coroutinesAndroid
+
     testImplementation Libs.jUnit
+    testImplementation Libs.mockkCore
+    testImplementation Libs.mockkAndroid
+    testImplementation Libs.coreTesting
+    testImplementation Libs.coroutinesTest
+    testImplementation Libs.coroutines
 }

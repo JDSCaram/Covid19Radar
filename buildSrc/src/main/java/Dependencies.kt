@@ -32,6 +32,7 @@ object Versions {
     const val navigation = "2.2.0"
     const val googlemaps = "17.0.0"
     const val lottieVersion = "3.4.1"
+    const val mockk = "1.10.0"
 }
 
 object Libs {
@@ -56,6 +57,7 @@ object Libs {
     const val gsonConverter = "com.squareup.retrofit2:converter-gson:${Versions.retrofit}"
 
     const val jUnit = "junit:junit:${Versions.junit}"
+    const val kotlinJunit = "org.jetbrains.kotlin:kotlin-test-junit:${Versions.kotlin}"
     const val extInstrumentation = "androidx.test.ext:junit:${Versions.extInstrumentation}"
     const val espresso = "androidx.test.espresso:espresso-core:${Versions.espresso}"
 
@@ -84,6 +86,8 @@ object Libs {
     const val googlemaps = "com.google.android.gms:play-services-maps:${Versions.googlemaps}"
 
     const val lottie = "com.airbnb.android:lottie:${Versions.lottieVersion}"
+    const val mockkCore = "io.mockk:mockk:${Versions.mockk}"
+    const val mockkAndroid = "io.mockk:mockk-android:${Versions.mockk}"
 }
 
 object Modules {
